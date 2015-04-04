@@ -29,11 +29,21 @@ make build-image
 
 Usage:
 -----
-Use it as you would use the _irssi_ command.
+
+You can use the simple _run.sh_ script that we have provided:
+```bash
+./run.sh <nick> <server>
+
+# To connect as mmr into irc.freenode.net
+./run.sh mmr irc.freenode.net
+```
+
+Or you can run the container by hand, just like you would run the _irssi_ command.
 Examples:
 ```bash
 # Show irssi help
 docker run -i --rm mribeiro/irc --help
 
-# Connect to freenode
-docker run -i --rm mribeiro/irc irc.freenode.net
+# Connect to freenode as mmr
+docker run -i --rm mribeiro/irc -n mmr -c irc.freenode.net
+```
